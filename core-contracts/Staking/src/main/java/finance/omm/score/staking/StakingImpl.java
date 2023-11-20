@@ -314,8 +314,8 @@ public class StakingImpl implements Staking {
 
     @External(readonly = true)
     public List<Address> getTopPreps() {
-        List<Address> topPreps = new ArrayList<>();
         int topPrepsCount = this.topPreps.size();
+        List<Address> topPreps = new ArrayList<>(topPrepsCount);
         for (int i = 0; i < topPrepsCount; i++) {
             Address prep = this.topPreps.get(i);
             topPreps.add(prep);
